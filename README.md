@@ -1,11 +1,16 @@
-```markdown
-# Projeto de Integração com o GeoServer
+README_CONTENT = """# 🗺️ WMS Image Request
 
-## Objetivo
+Este script em Python permite requisitar imagens de mapas 📍 de um servidor WMS (Web Map Service) hospedado no GeoServer. Ele utiliza a biblioteca `requests` para realizar a requisição HTTP e `Pillow` para processar a imagem recebida.
 
-Este projeto tem como objetivo criar um workspace no GeoServer, adicionar um store de um arquivo shapefile dos municípios da Paraíba, publicar uma camada a partir do shapefile cadastrado e criar uma aplicação que consome o serviço WMS para obter uma imagem em formato PNG da cidade de Esperança, na escala de 1:136K.
+## 🔍 Como funciona?
 
-## Por Conseguinte
+1. O código constrói uma URL contendo os parâmetros necessários para a requisição.
+2. A requisição é enviada ao servidor WMS, que processa a solicitação e retorna a imagem.
+3. A imagem do mapa dos municípios da Paraíba 🏙️ é baixada e salva no formato PNG.
+4. Se tudo ocorrer bem, a imagem será salva localmente com o nome `PB_Municipios.png`.
+5. Caso haja um erro, uma mensagem será exibida no console informando o problema ❌.
 
-Este projeto integra o GeoServer com uma aplicação simples para acessar um serviço WMS, oferecendo uma visualização geoespacial em formato de imagem, com a possibilidade de definir a escala da imagem requerida. A utilização do GeoServer para o armazenamento e publicação de dados geoespaciais facilita o acesso a essas informações de maneira eficiente e escalável.
-```
+Este script pode ser facilmente modificado para obter imagens de diferentes camadas e regiões do mapa, bastando alterar os parâmetros da requisição.
+
+🌍🚀
+"""
